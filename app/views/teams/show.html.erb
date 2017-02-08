@@ -1,0 +1,4 @@
+
+<%= form_for :user do |f| %>
+  <%=f.collection_select @user, options_for_select(User.all.collect {|e| ["#{e.first_name} - #{e.last_name}", e.id] }), :include_blank => true %>
+<%end%>
